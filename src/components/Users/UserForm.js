@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Card from '../UI/Card'
 import classes from './UserForm.module.css'
+import Button from '../UI/Button'
 
 const UserForm = ({ formSubmit }) => {
   const [username, setUsername] = useState('')
@@ -28,27 +29,16 @@ const UserForm = ({ formSubmit }) => {
   return (
     <Card className={classes.input}>
       <form className='input' onSubmit={submitForm}>
-        <label htmlFor='username' className='form-control__label'>
-          Username
-        </label>
+        <label htmlFor='username'>Username</label>
         <input
           id='username'
-          className='form-control__input'
           type='text'
           value={username}
           onChange={changeUsername}
         />
-        <label htmlFor='age' className='form-control__label'>
-          Age (Years)
-        </label>
-        <input
-          id='age'
-          className='form-control__input'
-          type='text'
-          value={age}
-          onChange={changeAge}
-        />
-        <button>Add User</button>
+        <label htmlFor='age'>Age (Years)</label>
+        <input id='age' type='text' value={age} onChange={changeAge} />
+        <Button onClick={submitForm}>Add User</Button>
       </form>
     </Card>
   )
