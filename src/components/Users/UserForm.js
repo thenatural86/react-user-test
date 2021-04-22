@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './UserForm.css'
+import Card from '../UI/Card'
 
 const UserForm = ({ formSubmit }) => {
   const [username, setUsername] = useState('')
@@ -25,17 +26,23 @@ const UserForm = ({ formSubmit }) => {
   }
 
   return (
-    <div>
+    <Card>
       <form className='form-control' onSubmit={submitForm}>
-        <label className='form-control__label'>Username</label>
+        <label htmlFor='username' className='form-control__label'>
+          Username
+        </label>
         <input
+          id='username'
           className='form-control__input'
           type='text'
           value={username}
           onChange={changeUsername}
         />
-        <label className='form-control__label'>Age (Years)</label>
+        <label htmlFor='age' className='form-control__label'>
+          Age (Years)
+        </label>
         <input
+          id='age'
           className='form-control__input'
           type='text'
           value={age}
@@ -43,7 +50,7 @@ const UserForm = ({ formSubmit }) => {
         />
         <button>Add User</button>
       </form>
-    </div>
+    </Card>
   )
 }
 
