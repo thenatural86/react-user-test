@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './UserForm.css'
 import Card from '../UI/Card'
+import classes from './UserForm.module.css'
 
 const UserForm = ({ formSubmit }) => {
   const [username, setUsername] = useState('')
@@ -26,8 +26,8 @@ const UserForm = ({ formSubmit }) => {
   }
 
   return (
-    <Card>
-      <form className='form-control' onSubmit={submitForm}>
+    <Card className={classes.input}>
+      <form className='input' onSubmit={submitForm}>
         <label htmlFor='username' className='form-control__label'>
           Username
         </label>
