@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Card from '../UI/Card'
+import Card from '../Card'
 import classes from './UserForm.module.css'
-import Button from '../UI/Button'
+import Button from '../Button'
 
 const UserForm = ({ formSubmit }) => {
   const [username, setUsername] = useState('')
