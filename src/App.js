@@ -6,7 +6,7 @@ const App = () => {
   const [userList, setUserList] = useState([])
 
   const formSubmission = (user) => {
-    setUserList((prevState) => [...prevState, user])
+    setUserList((prevState) => [user, ...prevState])
   }
 
   return (

@@ -40,7 +40,7 @@ const UserForm = ({ formSubmit }) => {
         />
         <label htmlFor='age'>Age (Years)</label>
         <input id='age' type='number' value={age} onChange={changeAge} />
-        <Button onClick={submitForm}>Add User</Button>
+        <Button type='submit'>Add User</Button>
       </form>
     </Card>
   )
