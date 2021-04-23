@@ -8,7 +8,6 @@ const UserForm = ({ formSubmit }) => {
   const [age, setAge] = useState('')
 
   const changeUsername = (e) => {
-    console.log(e.target.value)
     setUsername(e.target.value)
   }
 
@@ -18,6 +17,9 @@ const UserForm = ({ formSubmit }) => {
 
   const submitForm = (e) => {
     e.preventDefault()
+    if (!username || age <= 0 || age.length === 0) {
+      return
+    }
     setUsername('')
     setAge('')
     formSubmit({
@@ -37,7 +39,7 @@ const UserForm = ({ formSubmit }) => {
           onChange={changeUsername}
         />
         <label htmlFor='age'>Age (Years)</label>
-        <input id='age' type='text' value={age} onChange={changeAge} />
+        <input id='age' type='number' value={age} onChange={changeAge} />
         <Button onClick={submitForm}>Add User</Button>
       </form>
     </Card>

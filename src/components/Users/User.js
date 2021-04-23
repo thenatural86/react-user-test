@@ -3,8 +3,7 @@ import React from 'react'
 const User = ({ username, age }) => {
   return (
     <div>
-      {username}
-      {age}
+      {username} {age} years old
     </div>
   )
 }
