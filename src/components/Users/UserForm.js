@@ -39,7 +39,7 @@ const UserForm = ({ formSubmit }) => {
   }
 
   return (
-    <div>
+    <>
       {error && (
         <ErrorModal
           title={error.title}
@@ -61,7 +61,7 @@ const UserForm = ({ formSubmit }) => {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </div>
+    </>
   )
 }
 

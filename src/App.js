@@ -10,10 +10,10 @@ const App = () => {
   }
 
   return (
-    <div>
+    <>
       <UserForm formSubmit={formSubmission} />
       <UserList userList={userList} />
-    </div>
+    </>
   )
 }
 
