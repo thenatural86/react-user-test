@@ -8,7 +8,6 @@ const App = () => {
   const formSubmission = (user) => {
     setUserList((prevState) => [user, ...prevState])
   }
-
   return (
     <>
       <UserForm formSubmit={formSubmission} />

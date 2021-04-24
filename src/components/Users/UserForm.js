@@ -19,6 +19,7 @@ const UserForm = ({ formSubmit }) => {
 
   const submitForm = (e) => {
     e.preventDefault()
+
     if (!username || age <= 0 || age.length === 0) {
       setError({
         title: 'Invalid input',
